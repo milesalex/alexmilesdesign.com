@@ -1,13 +1,62 @@
 @charset "utf-8";
 
+$tablet-and-up: 700px;
+
+
 * {
     box-sizing:border-box;
 }
 
 body {
   font-family: menlo;
-  padding:30px;
   font-size:12px;
   line-height:1.5;
+  padding:10px;
+  background: #000;
+  color:#fff;
 }
 
+a {
+	color: #fff;
+
+	&:hover {
+		text-decoration: none;
+		color: #00ff78;
+	}
+}
+
+img {
+	max-width: 100%;
+	height:auto;
+}
+
+.info {
+	margin-bottom: 90px;
+
+	@media screen and (min-width: $tablet-and-up) {
+    position: fixed;
+  }
+}
+
+.work {
+	text-align: center;
+	padding-bottom:200px;
+
+	img {
+		margin-bottom: 200px;
+	}
+
+	@media screen and (min-width: $tablet-and-up) {
+		margin-top:450px;
+	}
+
+	&.offThePage {
+		// margin-top:800px;
+	}
+}
+
+.repeat {
+	// Used to add space to bottom of page for repeat function
+	height:2000px;
+	width:100%;
+}

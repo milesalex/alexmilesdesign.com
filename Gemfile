@@ -7,7 +7,7 @@ gem "middleman", "~>3.1.4"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
-# Publish to github page
+# Publish to github middleman-gh-pages
 gem 'middleman-gh-pages'
 
 # For faster file watcher updates on Windows:
