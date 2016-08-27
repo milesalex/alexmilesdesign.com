@@ -1,19 +1,16 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'http://rubygems.org'
-
-gem "middleman", "~>3.1.4"
-
-# Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
-
-# Publish to github middleman-gh-pages
-gem 'middleman-gh-pages'
+# If you do not have OpenSSL installed, change
+# the following line to use 'http://'
+source 'https://rubygems.org'
 
 # For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 
-# Cross-templating language block fix for Ruby 1.8
-platforms :mri_18 do
-  gem "ruby18_source_location"
-end
+# Windows does not come with time zone data
+gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+
+# Middleman Gems
+gem 'middleman', '>= 4.0.0'
+gem 'middleman-livereload'
+
+gem 'middleman-deploy', '~> 2.0.0-alpha'
+gem 'middleman-search_engine_sitemap'
